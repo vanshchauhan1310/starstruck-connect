@@ -131,9 +131,7 @@ export function VideoCarousel() {
 
         <div className="relative">
           {/* Left and right gradient masks */}
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10"></div>
-          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10"></div>
-          
+         
           {/* Video carousel */}
           <div 
             ref={containerRef}
