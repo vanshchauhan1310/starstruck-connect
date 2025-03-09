@@ -4,7 +4,16 @@ import { useQuery } from "@tanstack/react-query";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { mockCelebrities, celebrityVideos, Celebrity, CelebrityVideo } from "@/lib/mock-data";
+import { mockCelebrities, celebrityVideos } from "@/lib/mock-data";
+import type { Celebrity, CelebrityVideoMessage } from "@/shared/schema";
+
+interface CelebrityVideo {
+  id: string;
+  celebrityId: string;
+  title: string;
+  videoUrl: string;
+  thumbnailUrl: string;
+}
 
 export function VideoCarousel() {
   const { data: videos } = useQuery<CelebrityVideo[]>({
